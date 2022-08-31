@@ -1,10 +1,10 @@
 /*
  * @Author: 张玉婷
  * @Date: 2022-08-31 10:32:51
- * @LastEditTime: 2022-08-31 11:23:38
+ * @LastEditTime: 2022-08-31 17:55:41
  * @LastEditors: 张玉婷
  * @Description: 
- * @FilePath: \typeScript\typeScript\chapter02\part1\src\07_ 属性的封装.ts
+ * @FilePath: \typeScript\typeScript\chapter02\part1\src\07_ 属性的封装 copy.ts
  */
 (function() {
   // 定一个表示人的类
@@ -89,6 +89,7 @@
   // 错误 protected只能在当前类或者子类内部访问， 不能通过实例访问
   // console.log(b.protectedNum)
 
+  
   // class C {
   //   name: string
   //   constructor (name: string) {
