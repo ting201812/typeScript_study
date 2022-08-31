@@ -1,0 +1,68 @@
+{
+  /*
+   ts 编译配置文件
+   ts 可以根据他的信息对代码进行编译
+   "include": 表示哪些ts文件需要编译; * 表示任意文件, ** 表示任意目录
+   "exclude" : 表示哪些ts文件不需要编译
+      默认值：[“node_modules”, “bower_components”, “jspm_packages”]
+    extends: 继承 
+    file: 编译哪些文件 设置哪些文件
+    compilerOptions: 编译器选项 {
+      // 指令ts编译为js的版本
+      target: 'ES6'
+      // 指定模块化规范 es6, commonjs ...
+      module: 'es6',
+      // 指定项目中使用的库
+      lib: []
+    // 指定编译后的文件所在的目录
+      outDir: './dist1'
+      // 指定输出的文件 可以将代码合并为一个文件
+      outFile: './dist1'
+      // 是否对js进行编译
+      allowJs: boolean
+      // 是否检查js代码是否符合语法规范 默认为true
+      checkJs:  boolean 
+      // 是否移除注释
+      removeComments: boolean
+      // 是否生成编译后的文件
+      noEmit: boolean
+      // 有错误的时候, 不会生成编译后的文件
+      noEmitOnError: boolean
+      // 用来设置编译后的文件是否使用严格模式
+      alwaysStrict: boolean
+      // 是否允许隐式any
+      noImplicitAny: boolean
+      // 是否允许不允许明确类型的this
+      noImplicitThis：boolean
+      // 是否严格检查空值
+      strictNullChecks: boolean
+      //  严格检查总开关
+      strict: boolean
+    }
+
+  */
+  "include": [
+    // 编译src下的所有目录中的所有.ts文件
+    "./src/**/*"
+  ],
+  "exclude": [
+    // 不会编译hello下的所有目录中的所有.ts文件
+    "./src/hello/**/*"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "outDir": "./dist1",
+    "strict": true,
+    // "outFile": "./dist1/app1.ts"
+    "allowJs": true,
+    "checkJs": true,
+    "removeComments": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false
+  }
+}
